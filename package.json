@@ -1,0 +1,38 @@
+{
+  "name": "badgemaker",
+  "version": "1.0.0",
+  "description": "Telegram bot that makes Ingress badges",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "start-dev": "nodemon --exec node -r dotenv/config index.js",
+    "test": "standard",
+    "fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrofracassi/badgemaker.git"
+  },
+  "author": "Pedro Fracassi <pedroluizfracassi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pedrofracassi/badgemaker/issues"
+  },
+  "homepage": "https://github.com/pedrofracassi/badgemaker#readme",
+  "keywords": [
+    "ingress",
+    "canvas",
+    "node-canvas",
+    "telegram"
+  ],
+  "devDependencies": {
+    "dotenv": "^6.1.0",
+    "nodemon": "^1.18.6",
+    "standard": "^12.0.1"
+  },
+  "dependencies": {
+    "canvas-prebuilt": "^2.0.0-alpha.14",
+    "node-telegram-bot-api": "^0.30.0",
+    "rgbquant": "^1.1.2"
+  }
+}
