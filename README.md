@@ -1,4 +1,4 @@
-# Badge Maker ![Try it on telegram](https://img.shields.io/badge/try%20it-on%20telegram-0088cc.svg)
+# Badge Maker [![Try it on telegram](https://img.shields.io/badge/try%20it-on%20telegram-0088cc.svg)](http://t.me/badgemakerbot)
 
 <img src="https://i.imgur.com/ZrPeuKU.png" align="right" title="Badge Maker Logo" height="178">
 
