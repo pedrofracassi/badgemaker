@@ -26,6 +26,7 @@ bot.on('message', async (msg) => {
   if (msg.photo) {
     if (factions[msg.chat.id]) {
       console.log(`Generating badge for ${msg.from.first_name} (${msg.from.username})...`)
+      bot.sendChatAction(msg.chat.id, 'upload_photo').catch(console.error)
       const pictureCanvas = createCanvas(585, 585)
       const pictureCtx = pictureCanvas.getContext('2d')
       const { file_path } = await bot.getFile(msg.photo[msg.photo.length - 1].file_id)
@@ -54,5 +55,5 @@ bot.onText(/\/start/, async (msg) => {
 
 bot.onText(/\/(res|enl)/, async (msg, match) => {
   factions[msg.chat.id] = match[1]
-  bot.sendMessage(msg.chat.id, 'Great! Now send me the picture you want to make the badge with.').catch(console.log)
+  bot.sendMessage(msg.chat.id, 'Great! Now send me the picture you want to make the badge with. Square ones are  highly recommended, as rectangular ones will get squished.').catch(console.log)
 })
