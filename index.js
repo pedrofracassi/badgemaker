@@ -42,7 +42,7 @@ bot.on('message', async (msg) => {
       finalCtx.drawImage(pictureCanvas, 125, 125, 710, 710)
       finalCtx.drawImage(frame, 0, 0, 960, 960)
       factions[msg.chat.id] = null
-      bot.sendPhoto(msg.chat.id, finalCanvas.toBuffer('image/jpeg', { quality: 1 }))
+      bot.sendPhoto(msg.chat.id, finalCanvas.toBuffer('image/png', { quality: 1 }))
     } else {
       bot.sendMessage(msg.chat.id, 'You have to tell me the faction first. Type /res or /enl to choose!').catch(console.log)
     }
