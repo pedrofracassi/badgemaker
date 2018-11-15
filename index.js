@@ -32,14 +32,14 @@ bot.on('message', async (msg) => {
 	   
       //Clippin path to not draw outside the edges of the shape
       pictureCtx.beginPath();
-	    pictureCtx.moveTo(480, 120);
+      pictureCtx.moveTo(480, 120);
       pictureCtx.lineTo(795, 295);
       pictureCtx.lineTo(795, 660);
-	    pictureCtx.moveTo(480, 840);
+      pictureCtx.moveTo(480, 840);
       pictureCtx.lineTo(165, 660);
-	    pictureCtx.lineTo(165, 295);
-	    pictureCtx.closePath();
-	    pictureCtx.clip()
+      pictureCtx.lineTo(165, 295);
+      pictureCtx.closePath();
+      pictureCtx.clip()
       //End of clipping
       
       const { file_path } = await bot.getFile(msg.photo[msg.photo.length - 1].file_id)
@@ -55,7 +55,7 @@ bot.on('message', async (msg) => {
       finalCtx.drawImage(pictureCanvas, 125, 125, 710, 710)
       finalCtx.drawImage(frame, 0, 0, 960, 960)
       factions[msg.chat.id] = null
-      bot.sendPhoto(msg.chat.id, finalCanvas.toBuffer('image/jpeg', { quality: 1 }))
+      bot.sendPhoto(msg.chat.id, finalCanvas.toBuffer('image/png', { quality: 1 }))
     } else {
       bot.sendMessage(msg.chat.id, 'You have to tell me the faction first. Type /res or /enl to choose!').catch(console.log)
     }
